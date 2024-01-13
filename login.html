@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Login page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 15;
+                padding: 10;
+            }
+            body { font: 13px Arial;
+                background-image: url("https://i.pinimg.com/originals/9f/68/a9/9f68a9a45aab0bec289d8431ea0cdba9.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container h1{
+                margin-bottom: 30px;
+                color: black;
+            }
+            .container{
+                color:white;
+                border: 1px solid rgb(31, 124, 129);
+                border-radius: 25px;
+                text-align: center;
+                align-content: center;
+                margin:10vh;
+                padding: 2rem;
+                width: 250px;
+                height: 320px;
+            }
+            
+            .container input{
+                width: 140px;
+                margin-top: 0.5rem;
+                border: none;
+                border-bottom: 1px solid black;
+                background: transparent;
+                color:black;
+            }
+            #p3{
+                border-radius: 0.5rem;
+                background-color: rgb(154, 82, 165);
+                padding: 0.5rem;
+                cursor: pointer;
+                color: black;
+                transition: all 0.3s ease-in;
+            }
+            .fp{
+                color: black;
+            }
+            .container p{
+                position:relative;
+            }
+           i{
+            font-size: 1.5em;
+            color: black;
+
+           }
+        </style>
+    </head>
+    <body>
+        <script>
+            function login(){
+                var username=document.getElementById('uname').value;
+                var password=document.getElementById('password').value;
+                if(username=="admin" && password=="123") {
+                    alert("login successfull");
+                }
+                else{
+                alert("Invalid Username or Password");
+        }
+        }
+        </script>
+        <div class="container">
+            <h1>User Login</h1>
+            <p><input type="text" name="uname" id="uname" placeholder="Enter username"><i class="fa fa-user"></i></p>
+            <p><input type="password" name="password" id="password" placeholder="Enter password"><i class="fa fa-lock"></i></p>
+            <button id="p3" onclick="login()">Login</button>
+            <p class="fp">Forgot password? <a href="">Click Here</a></p>
+            <button id="p3">Create Account</button>
+        </div>
+    </body>
+</html>
+
